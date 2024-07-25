@@ -30,4 +30,3 @@ func TestPush(t *testing.T) {
 		}
 	}
 }
-:q:q
