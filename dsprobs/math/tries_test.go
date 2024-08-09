@@ -3,6 +3,10 @@ package math
 import (
           "testing"
 		)
+// Issues while coding and testing
+//   - missing comma between the instances of TrieTest while initializing trieTests
+//	 - redundant TrieTest with flower brackets - you just need flower brackets
+//   - missing var prefix for trieTests
 
 type TrieTest struct{
 	arg1 string
