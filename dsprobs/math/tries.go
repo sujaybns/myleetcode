@@ -2,6 +2,9 @@ package math
 
 import "fmt"
 
+// Issues while coding and testing
+//   - alphabet count Not set,
+//     temp.children[charIndex] != nil should be temp.children[charIndex] == nil
 const AlphabetCount = 26
 
 type TrieNode struct {
