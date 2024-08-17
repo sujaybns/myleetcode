@@ -47,18 +47,20 @@ func recBFSSearch(root *BFSNode, val int) bool {
 
 
 
-func (b *BFSTree) BFSTraversal() {
-	recBFSTraversal(b.root)
+func (b *BFSTree) BFSTraversal() []interface{}{
+	return recBFSTraversal(b.root)
 }
 
-func recBFSTraversal(root *BFSNode){
+func recBFSTraversal(root *BFSNode)  []interface{}{
 	queue := Queue{} 
 	queue.Enqueue(root)
+	var newList []interface{}
 	for !queue.IsEmpty(){
 		size := queue.Size()
 		for i := 0;i < size ; i++{
 			item := queue.Dequeue().(*BFSNode)
 			fmt.Println(item.val)
+			newList = append(newList, item.val)
 			if item.left != nil {
 				queue.Enqueue(item.left)
 			}
@@ -67,6 +69,7 @@ func recBFSTraversal(root *BFSNode){
 			}
 		}
 	}
+	return newList
 }
 
 func initBFSTree() *BFSTree {
