@@ -39,10 +39,8 @@ func TestBSTTreeAllOperations(t *testing.T) {
 	bstTre.Insert(80)
 	bstTre.Insert(110)
 	bstTre.Insert(70)
-	// fmt.Printf("bstTre.Search(70):%v\n", bstTre.Search(70))
 	bstTre.inOrderTraversal(bstTre.root)
 	bstTre.Delete(80)
 	bstTre.inOrderTraversal(bstTre.root)
-	// bstTre.LeftSearch()
 	fmt.Println("Complete")
 }

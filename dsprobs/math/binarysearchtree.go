@@ -78,21 +78,6 @@ func recSearch(root *BSTNode, val int) bool {
 	return recSearch(root.left, val)
 }
 
-func (b *BSTTree) LeftSearch() *BSTNode {
-	return recLeftSearch(b.root)
-}
-
-func recLeftSearch(bSTNode *BSTNode) *BSTNode {
-	if bSTNode == nil {
-		fmt.Printf("Reached the end")
-		return nil
-	}
-	fmt.Printf("proceeding from :%v\n", bSTNode.val)
-	bSTNode.left = recLeftSearch(bSTNode.left)
-	fmt.Printf("\nbacktracking from :%v\n", bSTNode.val)
-	return bSTNode
-}
-
 func (b BSTTree) inOrderTraversal(node *BSTNode) {
 	if node != nil {
 		b.inOrderTraversal(node.left)
