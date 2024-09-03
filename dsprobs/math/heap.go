@@ -47,6 +47,7 @@ func (h *Heap) heapifyDown(index int) {
 		if h.items[index] < h.items[childToCompare] {
 			h.swap(index, childToCompare)
 			index = childToCompare
+			l, r = h.left(index), h.right(index)
 		} else {
 			break
 		}
