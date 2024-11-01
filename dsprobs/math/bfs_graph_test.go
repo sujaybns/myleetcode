@@ -22,7 +22,7 @@ type BFSGraphTestResult struct {
 	output []int
 }
 
-var bfsGraphTestResult = BFSTreeTestResult{output: []int{0,1,2,3,4}}
+var bfsGraphTestResult = BFSTreeTestResult{output: []int{0, 1, 2, 3, 4}}
 
 func TestBFSGraph(t *testing.T) {
 
