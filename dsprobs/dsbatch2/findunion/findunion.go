@@ -1,7 +1,7 @@
 package findunion
 
 func initParent(parent *[]int){
-	for i :=range 10{
+	for i :=range len(*parent){
 		(*parent)[i] = i
 	}
 } 
